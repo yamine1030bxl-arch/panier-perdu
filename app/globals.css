@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-tomate: #c23d22;
+  --color-tomate-fonce: #a2311b;
+  --color-billet: #1e5a43;
+  --color-papier: #faf7f1;
+  --color-encre: #1a1917;
+  --color-gris: #6b6760;
+  --color-trait: #e4ded3;
+
+  --font-titre: var(--font-archivo), system-ui, sans-serif;
+  --font-chiffre: var(--font-plex-mono), ui-monospace, monospace;
+  --font-sans: var(--font-source-sans), system-ui, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-papier);
+  color: var(--color-encre);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+/* Titres : Archivo élargi, graisse 800 */
+.titre {
+  font-family: var(--font-titre);
+  font-weight: 800;
+  font-variation-settings: "wdth" 115;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+/* Montants : effet ticket de caisse */
+.chiffre {
+  font-family: var(--font-chiffre);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Ticket à bord inférieur dentelé */
+.ticket-ombre {
+  filter: drop-shadow(0 1px 0 var(--color-trait))
+    drop-shadow(0 8px 16px rgb(26 25 23 / 0.07));
+}
+.ticket {
+  --dent: 9px;
+  background: #fff;
+  padding: 1.25rem 1.25rem calc(var(--dent) + 1.25rem);
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / calc(2 * var(--dent)) 100%;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / calc(2 * var(--dent)) 100%;
+}
+
+/* Repère des champs légaux à compléter */
+.a-completer {
+  background: #ffe066;
+  color: var(--color-encre);
+  padding: 0 0.25em;
+  font-weight: 600;
+}
+
+/* Pages légales */
+.legal h2 {
+  font-family: var(--font-titre);
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem;
+}
+.legal p,
+.legal li {
+  margin: 0.5rem 0;
+}
+.legal ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.legal a {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-billet);
+  outline-offset: 2px;
+}
