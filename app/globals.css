@@ -86,3 +86,7 @@ body {
   outline: 3px solid var(--color-billet);
   outline-offset: 2px;
 }
+
+summary::-webkit-details-marker {
+  display: none;
+}
