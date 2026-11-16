@@ -7,13 +7,13 @@
 
 export const legal = {
   raisonSociale: null as string | null, // ex. "Yamine Dupont" ou "Panier Perdu SAS"
-  formeJuridique: null as string | null, // ex. "Entrepreneur individuel (micro-entreprise)"
+  formeJuridique: "Société à responsabilité limitée (SRL)" as string | null,
   adresse: null as string | null, // adresse postale complète
-  siret: null as string | null, // 14 chiffres (ou numéro BCE si ton entreprise est belge)
-  tva: null as string | null, // ex. "TVA non applicable, art. 293 B du CGI" ou ton n° de TVA
+  numeroEntreprise: null as string | null, // numéro BCE, ex. "0123.456.789"
+  tva: null as string | null, // ex. "BE0123.456.789"
   emailContact: null as string | null, // ex. "bonjour@panierperdu.fr"
   directeurPublication: null as string | null, // ton nom
-  villeTribunal: null as string | null, // ex. "Paris"
+  villeTribunal: null as string | null, // ville du siège, ex. "Bruxelles"
 };
 
 const vercelUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL;

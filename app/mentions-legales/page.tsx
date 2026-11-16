@@ -18,11 +18,13 @@ export default function MentionsLegales() {
         <br />
         <Champ v={legal.adresse} label="adresse postale" />
         <br />
-        SIRET : <Champ v={legal.siret} label="SIRET" />
+        Numéro d&apos;entreprise (BCE) : <Champ v={legal.numeroEntreprise} label="numéro BCE" />
         <br />
-        <Champ v={legal.tva} label="mention TVA" />
+        RPM : tribunal de l&apos;entreprise de <Champ v={legal.villeTribunal} label="ville du siège" />
         <br />
-        Contact : <Champ v={legal.emailContact} label="e-mail de contact" />
+        TVA : <Champ v={legal.tva} label="numéro de TVA (BE…)" />
+        <br />
+        E-mail : <Champ v={legal.emailContact} label="e-mail de contact" />
       </p>
       <p>
         Directeur de la publication : <Champ v={legal.directeurPublication} label="nom" />

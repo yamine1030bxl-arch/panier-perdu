@@ -64,7 +64,8 @@ export default function Confidentialite() {
       <p>
         Tu peux accéder à tes données, les rectifier, les effacer, t&apos;opposer à leur traitement, en
         limiter l&apos;usage ou les récupérer, en écrivant à {email}. Réponse sous un mois au plus. Tu peux
-        aussi adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" rel="noopener noreferrer">cnil.fr</a>).
+        aussi adresser une réclamation à l&apos;Autorité de protection des données (<a href="https://www.autoriteprotectiondonnees.be" rel="noopener noreferrer">autoriteprotectiondonnees.be</a>)
+        ou, si tu résides en France, à la CNIL (<a href="https://www.cnil.fr" rel="noopener noreferrer">cnil.fr</a>).
       </p>
 
       <h2>Cookies</h2>

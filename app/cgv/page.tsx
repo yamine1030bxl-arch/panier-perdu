@@ -39,7 +39,7 @@ export default function CGV() {
         <li>Formule annuelle : 290 € par an et par boutique.</li>
       </ul>
       <p>
-        Relances illimitées. <Champ v={legal.tva} label="mention TVA (ex. « TVA non applicable, art. 293 B du CGI »)" />.
+        Relances illimitées. Les prix sont indiqués hors TVA. Pour un Client établi dans un autre État membre de l&apos;Union européenne et disposant d&apos;un numéro de TVA valide, la facture est émise hors TVA et la taxe est autoliquidée par le Client. <mark className="a-completer">[À FAIRE VALIDER PAR TON COMPTABLE : traitement des Clients sans numéro de TVA]</mark>
         L&apos;Éditeur peut modifier ses prix ; tout changement est notifié au Client au moins 30 jours à
         l&apos;avance et ne s&apos;applique qu&apos;à la période suivante.
       </p>
@@ -103,9 +103,9 @@ export default function CGV() {
 
       <h2>11. Droit applicable</h2>
       <p>
-        Les présentes conditions sont soumises au droit français. En cas de litige, et après une tentative de
-        résolution amiable, les tribunaux de <Champ v={legal.villeTribunal} label="ville" /> sont seuls
-        compétents.
+        Les présentes conditions sont soumises au droit belge. En cas de litige, et après une tentative de
+        résolution amiable, les tribunaux de l&apos;arrondissement judiciaire de{" "}
+        <Champ v={legal.villeTribunal} label="ville du siège" /> sont seuls compétents.
       </p>
     </PageLegale>
   );
