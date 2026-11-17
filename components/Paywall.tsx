@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { euros } from "@/lib/diagnostic";
 import type { Boutique } from "@/lib/relances";
+import Paiement from "@/components/Paiement";
 
 export type DiagnosticStocke = {
   commandes: number;
@@ -151,20 +152,12 @@ export default function Paywall({
       </p>
 
       {/* 5 + 6. Paiement sur le même écran */}
-      <div id="paiement" className="mt-6 rounded-md border-2 border-dashed border-trait bg-white p-4">
+      <div id="paiement" className="mt-6 rounded-md border border-trait bg-white p-4">
         <p className="font-semibold">
           {f.nom} · {formule === "annuel" ? "290 € par an" : "29 € par mois"}
         </p>
-        {/* Le formulaire de carte Stripe s'affichera ici (étape 4). */}
-        <p className="mt-2 text-sm text-gris">Le paiement sécurisé par carte s&apos;ouvrira ici très prochainement.</p>
-        <button
-          type="button"
-          disabled
-          className="mt-4 flex min-h-14 w-full items-center justify-center rounded-md bg-tomate px-7 text-lg font-bold text-white opacity-50"
-        >
-          Activer mes relances
-        </button>
-        <p className="mt-2 text-center text-sm font-semibold">Sans engagement, résiliable à tout moment.</p>
+        <p className="mt-1 mb-4 text-sm text-gris">Paiement sécurisé par Stripe. Nous ne voyons jamais ta carte.</p>
+        <Paiement formule={formule} boutique={boutique} diagnostic={diagnostic} />
       </div>
 
       {/* 7. Quatre questions fréquentes */}
